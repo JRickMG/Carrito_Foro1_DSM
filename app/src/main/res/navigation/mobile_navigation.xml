@@ -22,4 +22,5 @@
         android:name="com.udb.foro.Opciones"
         android:label="@string/title_Settings"
         tools:layout="@layout/fragment_opciones" />
+
 </navigation>

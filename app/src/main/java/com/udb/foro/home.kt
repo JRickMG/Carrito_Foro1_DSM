@@ -6,12 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.udb.foro.databinding.FragmentHomeBinding
 
 class home : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var adapter : AdaptadorProducto
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,7 +28,7 @@ class home : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.Iniciotexto.text = "Fragmento Inicio"
+        setupRecyclerView()
 
 
     }
@@ -32,4 +37,14 @@ class home : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
+    fun setupRecyclerView(){
+        var context = this.requireContext()
+        binding.rvListaProductos.layoutManager = LinearLayoutManager(context)
+        adapter = AdaptadorProducto(context, binding.tvCantProductos)
+        binding.rvListaProductos.adapter = adapter
+    }
+
+
 }

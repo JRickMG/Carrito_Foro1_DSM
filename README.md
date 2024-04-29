@@ -18,3 +18,5 @@ CARRITO DE COMPRAS
 ## Related
 Documento de investigación
 https://docs.google.com/document/d/1eREvq6s_CcquQzMTYlpfbcanQOG0iE8qiynxZNBuxSs/edit?usp=sharing
+Video de funcionamiento
+https://drive.google.com/file/d/1XUjB-AAFYtHE4erV3drc6tRcZA4bXCXg/view?usp=sharing
